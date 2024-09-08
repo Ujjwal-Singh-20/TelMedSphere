@@ -21,11 +21,11 @@ secret_key = secrets.token_hex(16)
 app = Flask(__name__)
 app.config['SESSION_TYPE'] = 'filesystem'
 app.config['SECRET_KEY'] = secret_key
-SECRET_KEY = "jkajoisjosk"
+SECRET_KEY = os.getenv('SECRET')
 
 app.config['MAIL_SERVER']='smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USERNAME'] = 'pratikmane610@gmail.com'
+app.config['MAIL_PORT'] = os.getenv('PORT')
+app.config['MAIL_USERNAME'] = os.getenv('HOST_EMAIL')
 app.config['MAIL_PASSWORD'] = os.getenv('PASSWORD')
 app.config['MAIL_USE_TLS'] = True
 mail = Mail(app)
@@ -44,7 +44,7 @@ client = pymongo.MongoClient(URI, server_api=ServerApi('1'))
 doctor = client.get_database("telmedsphere").doctors
 patients = client.get_database("telmedsphere").patients
 
-YOUR_DOMAIN = '' 
+YOUR_DOMAIN = os.getenv('DOMAIN') 
 
 
 @app.before_request

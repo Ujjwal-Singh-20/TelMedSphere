@@ -1,19 +1,5 @@
 {
-  "version": 2,
-  "name": "telemedsphere",
-  "builds": [
-    {
-      "src": "frontend/vite.config.js",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "frontend/dist"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "frontend/dist/index.html"
-    }
+  "rewrites": [
+      {"source": "/(.*)", "destination": "/"}
   ]
 }

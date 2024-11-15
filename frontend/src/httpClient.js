@@ -1,5 +1,5 @@
 import axios from "axios";
-const url = (process.env.NODE_ENV === 'development' ? "http://127.0.0.1:5000" : "https://pratik0112-telmedsphere-backend.vercel.app");
+const url = (process.env.NODE_ENV === 'development' ? "http://127.0.0.1:5000" : "https://telmedsphere-server.vercel.app");
 
 export default axios.create({
   withCredentials: true,

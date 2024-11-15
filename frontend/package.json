@@ -2,6 +2,7 @@
   "name": "telmedsphere",
   "version": "0.1.0",
   "private": true,
+  "homepage": "main.jsx",
   "dependencies": {
     "@chatscope/chat-ui-kit-react": "^1.10.1",
     "@emotion/react": "^11.10.6",

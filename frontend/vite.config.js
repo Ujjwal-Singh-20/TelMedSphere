@@ -3,7 +3,7 @@ import reactRefresh from '@vitejs/plugin-react-refresh';
 import svgrPlugin from 'vite-plugin-svgr';
 
 export default defineConfig({
-  base: '/',
+  base: '/',  // Keep base as '/' unless deploying to a subdirectory
   plugins: [
     reactRefresh(),
     svgrPlugin({
@@ -13,11 +13,12 @@ export default defineConfig({
     }),
   ],
   server: {
-    port: 3000,
+    port: 3000,  // Development port
   },
   build: {
+    outDir: 'dist',  // Ensure the build goes to `dist`
     rollupOptions: {
-      input: './src/main.jsx', // Ensure the correct entry point
+      input: './src/main.jsx',  // Ensure the entry point is correct
     },
   },
 });

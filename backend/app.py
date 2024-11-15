@@ -643,7 +643,5 @@ def get_wallet_history():
         var = doctor.find_one({'email': email})
         return jsonify({'message': 'Wallet history', 'wallet_history': var.get('wallet_history', [])}), 200
 
-if __name__ == "__main__":
-    app.run(debug=True)
 
 

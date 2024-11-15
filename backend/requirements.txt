@@ -13,3 +13,4 @@ stripe
 flask_mail
 pymongo
 python-dotenv
+werkzeug

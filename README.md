@@ -1,4 +1,4 @@
-# 2 types of User - Doctor & Patients
+Users - Doctor & Patients
 
 - Patients Features
 

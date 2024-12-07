@@ -1280,6 +1280,12 @@ export const Diseases = {
     ],
     Gout: ["Hot flush", "Pain", "Redness", "Swelling", "Erythema", "Emphysematous change", "Sore to touch", "Hypokinesia", "Ascites", "Patient non compliance"],
     Thrombocytopaenia: ["Ecchymosis", "Monocytosis", "Posterior\u00a0rhinorrhea", "Haemorrhage", "Tachypnea", "Fever", "Pruritus", "Hypotension", "Fatigue"],
+    Gastritis: [
+      "Abdomen acute",
+      "Abdominal bloating",
+      "Abdominal tenderness",
+      "Abnormal sensation",
+    ],
     Hypoglycemia: [
       "Unresponsiveness",
       "Hypothermia, natural",

@@ -11,7 +11,7 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/PratikMane0112/TelMedSphere)
 ![GitHub last commit](https://img.shields.io/github/last-commit/PratikMane0112/TelMedSphere)
 ![GitHub repo size](https://img.shields.io/github/repo-size/PratikMane0112/TelMedSphere)
-![Github](https://img.shields.io/github/license/PratikMane0112/TelMedSphere)
+![Github license](https://img.shields.io/github/license/PratikMane0112/TelMedSphere)
 ![GitHub issues](https://img.shields.io/github/issues/PratikMane0112/TelMedSphere)
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/PratikMane0112/TelMedSphere)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/PratikMane0112/TelMedSphere)

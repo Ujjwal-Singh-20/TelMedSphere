@@ -26,8 +26,8 @@
 <h2>🧾 Table of Contents</h2>
 
  [📌 Introduction](#introduction).<br>
- [💡 Features](#technology-used).<br>
- [🚀 Technology Used](#features).<br>
+ [💡 Features](#features).<br>
+ [🚀 Technology Used](#technology-used).<br>
  [⭐ Overview](#overview).<br>
  [💥 Getting Started](#getting-started).<br>
  [📑 Contributing Guidelines](#contributing-guidelines).<br>
@@ -63,11 +63,20 @@ TelMedSphere is designed to make healthcare simple and accessible for both docto
 <h2>🚀Technology Used</h2>
 
 <p>
-  <a href="https://www.w3schools.com/REACT/DEFAULT.ASP"> <img src="https://img.icons8.com/?size=80&id=NfbyHexzVEDk&format=png" alt="React" /></a>
+  <a href="https://www.w3schools.com/html/"> <img src="https://img.icons8.com/?size=64&id=20909&format=png" alt="HTML" /></a>
+  <a href="https://www.w3schools.com/css/"> <img src="https://img.icons8.com/?size=64&id=21278&format=png" alt="CSS" /></a>
+  <a href="https://www.w3schools.com/js/"> <img src="https://img.icons8.com/?size=64&id=108784&format=png" alt="JS" /></a>
+  <a href="https://www.w3schools.com/REACT/DEFAULT.ASP"> <img src="https://img.icons8.com/?size=64&id=NfbyHexzVEDk&format=png" alt="React" /></a>
   <a href="https://www.w3schools.com/sass/"> <img src="https://img.icons8.com/?size=64&id=qsQZWvMuX4ad&format=png" alt="SCSS" /></a>
-  <a href="https://www.geeksforgeeks.org/flask-tutorial/"><img src="https://img.icons8.com/?size=64&id=ewGOClUtmFX4&format=png" alt="JS" /></a>
-  <a href="https://www.w3schools.com/mongodb/"> <img src="https://img.icons8.com/?size=80&id=8rKdRqZFLurS&format=png" alt="Mongo" /></a>
+  <a href="https://www.w3schools.com/python/"> <img src="https://img.icons8.com/?size=64&id=13441&format=png" alt="Python" /></a>
+  <a href="https://www.geeksforgeeks.org/flask-tutorial/"><img src="https://img.icons8.com/?size=64&id=ewGOClUtmFX4&format=png" alt="Flask" /></a>
+  <a href="https://www.w3schools.com/mongodb/"> <img src="https://img.icons8.com/?size=64&id=74402&format=png" alt="Mongo" /></a>
 </p>
+
+🚨 Frontend: HTML, CSS, JS, ReactJs <br>
+🚨 Styling: SCSS <br>
+🚨 Backend: Python, Flask <br>
+🚨 Database: MongoDB <br>
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
 <h2>⭐Overview</h2>
@@ -144,9 +153,6 @@ TelMedSphere and everyone participating in it is governed by the [Code of Conduc
 <tr>
 <td align="center">
 <a href="https://github.com/PratikMane0112"><img src="https://avatars.githubusercontent.com/u/153143167?v=4" height="140px" width="140px" alt="Pratik Mane"></a><br><sub><b>Admin - Pratik Mane</b></sub>
-</td>
- <td align="center">
-<a href="https://github.com/HarshwardhanPatil07"><img src="https://avatars.githubusercontent.com/u/126240589?v=4" height="140px" width="140px" alt="Pratik Mane"></a><br><sub><b>Mentor - Harshwardhan Patil</b></sub>
 </td>
 </tr>
 </table>

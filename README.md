@@ -173,5 +173,7 @@ TelMedSphere and everyone participating in it is governed by the [Code of Conduc
 <h2>🧡Contributing with fun</h2>
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+
+<h2><a href="https://discord.gg/9q8bmAQQ">Join Discord Server↗️</a></h2>
 <h3>🎊 Contributions are always welcome 👨‍💻 Give it a 🌟 if you 🧡 TelMedSphere. Happy Coding !!!!! 🎊</h3>
 <h3 align="right"><a href="#top">⬆️</a></h3>

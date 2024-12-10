@@ -161,6 +161,17 @@ TelMedSphere and everyone participating in it is governed by the [Code of Conduc
 </table>
 
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<h2>🚩 This project has been part of the following Open Source Programs 🥳</h2>
+
+<table>
+<tr>
+<td align="center">
+<a href="https://kwoc.kossiitkgp.org/"><img src="https://kwoc.kossiitkgp.org/assets/kwoc_logo-DlraoW8b.png" height="100px" width="100px" alt="KWOC2024"></a><br><sub><b>KWOC 2k25</b></sub>
+</td>
+</tr>
+</table>
+
+<!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
 <h2>🫂Project Contributors</h2>
 
@@ -174,6 +185,6 @@ TelMedSphere and everyone participating in it is governed by the [Code of Conduc
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
-<h2><a href="https://discord.gg/9q8bmAQQ">Join Discord Server↗️</a></h2>
+<h2><a href="https://discord.gg/qsdDRKak28">Join Discord Server↗️</a></h2>
 <h3>🎊 Contributions are always welcome 👨‍💻 Give it a 🌟 if you 🧡 TelMedSphere. Happy Coding !!!!! 🎊</h3>
 <h3 align="right"><a href="#top">⬆️</a></h3>

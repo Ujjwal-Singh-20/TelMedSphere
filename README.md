@@ -83,12 +83,12 @@ TelMedSphere is designed to make healthcare simple and accessible for both docto
 
 <h1 align="center"> <a href="https://pratik0112-telmedsphere.vercel.app/"> Live Project Demo ↗️</a></h1>
 
-![Screenshot 2024-12-10 142620](https://github.com/user-attachments/assets/ff7a29d6-c166-4ded-89a5-99acb8255acc)
-![Screenshot 2024-12-10 142636](https://github.com/user-attachments/assets/c433012f-f49e-4a2a-91cb-b17a851fb5e1)
-![Screenshot 2024-12-10 142649](https://github.com/user-attachments/assets/5e67195c-4eef-44c4-ad61-54d03f8d0b19)
-![Screenshot 2024-12-10 142658](https://github.com/user-attachments/assets/f25147dc-9781-4e37-9cff-7da6f891c027)
-![Screenshot 2024-12-10 142710](https://github.com/user-attachments/assets/9b8f6ea3-93d4-4192-9201-4185946259bb)
-![Screenshot 2024-12-10 142725](https://github.com/user-attachments/assets/fb777664-8c09-4469-8336-e8c86a4cf27c)
+![](https://github.com/PratikMane0112/TelMedSphere/blob/master/Overview/1.png)
+![](https://github.com/PratikMane0112/TelMedSphere/blob/master/Overview/2.png)
+![](https://github.com/PratikMane0112/TelMedSphere/blob/master/Overview/3.png)
+![](https://github.com/PratikMane0112/TelMedSphere/blob/master/Overview/4.png)
+![](https://github.com/PratikMane0112/TelMedSphere/blob/master/Overview/5.png)
+![](https://github.com/PratikMane0112/TelMedSphere/blob/master/Overview/6.png)
 
 
 <h3 align="right"><a href="#top">⬆️</a></h3>
@@ -168,7 +168,7 @@ TelMedSphere and everyone participating in it is governed by the [Code of Conduc
 <table>
 <tr>
 <td align="center">
-<a href="https://kwoc.kossiitkgp.org/"><img src="https://kwoc.kossiitkgp.org/assets/kwoc_logo-DlraoW8b.png" height="100px" width="100px" alt="KWOC2024"></a><br><sub><b>KWOC 2k25</b></sub>
+<a href="https://kwoc.kossiitkgp.org/"><img src="https://kwoc.kossiitkgp.org/assets/kwoc_logo-DlraoW8b.png" height="100px" width="100px" alt="KWOC2024"></a><br><sub><b>KWOC 2k24</b></sub>
 </td>
 </tr>
 </table>

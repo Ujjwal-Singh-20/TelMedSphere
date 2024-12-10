@@ -83,11 +83,11 @@ TelMedSphere is designed to make healthcare simple and accessible for both docto
 
 <h1 align="center"> <a href="https://pratik0112-telmedsphere.vercel.app/"> Live Project Demo ↗️</a></h1>
 
-![Screenshot 2024-12-07 220653](https://github.com/user-attachments/assets/ab1d269b-304f-44d3-8197-a424e5799d6c)
-![Screenshot 2024-12-07 220909](https://github.com/user-attachments/assets/7ded8918-9711-40e1-abb6-78a0f0c43df8)
-![Screenshot 2024-12-07 220929](https://github.com/user-attachments/assets/974e0d92-f36e-4377-a6ed-efd0874de355)
-![Screenshot 2024-12-07 220951](https://github.com/user-attachments/assets/83c0fed1-411a-4bee-a4fc-ed4f2e94f01b)
-![Screenshot 2024-12-07 221003](https://github.com/user-attachments/assets/cf856b2c-1c4f-4f07-a3fe-d7f3420048cd)
+![](https://github.com/user-attachments/assets/ab1d269b-304f-44d3-8197-a424e5799d6c)
+![](https://github.com/user-attachments/assets/7ded8918-9711-40e1-abb6-78a0f0c43df8)
+![](https://github.com/user-attachments/assets/974e0d92-f36e-4377-a6ed-efd0874de355)
+![](https://github.com/user-attachments/assets/83c0fed1-411a-4bee-a4fc-ed4f2e94f01b)
+![](https://github.com/user-attachments/assets/cf856b2c-1c4f-4f07-a3fe-d7f3420048cd)
 
 <h3 align="right"><a href="#top">⬆️</a></h3>
 

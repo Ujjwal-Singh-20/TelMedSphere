@@ -60,7 +60,7 @@ git push -u origin <your_branch_name>
 
 <h2>🌟 Code of Conduct</h2>
 
-1. Please follow our project's [Code of Conduct](https://github.com/PratikMane0112/TelMedSphere/blob/main/.github/CODE_OF_CONDUCT.md) while contributing.
+1. Please follow our project's [Code of Conduct](https://github.com/PratikMane0112/TelMedSphere/blob/master/.github/CODE_OF_CONDUCT.md) while contributing.
 2. Treat all contributors and users with respect and create a positive and inclusive environment for everyone.</p>
 
 <h2>⚡ License</h2>

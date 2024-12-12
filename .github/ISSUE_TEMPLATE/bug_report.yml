@@ -26,7 +26,7 @@ body:
         - label: "I have checked the existing issues."
           required: true
 
-        - label: "I follow [Contributing Guidelines](https://github.com/PratikMane0112/TelMedSphere/blob/main/.github/CONTRIBUTING_GUIDELINES.md) of this project"
+        - label: "I follow [Contributing Guidelines](https://github.com/PratikMane0112/TelMedSphere/blob/master/.github/CONTRIBUTING_GUIDELINES.md) of this project"
           required: true
 
         - label: "I am a SWOC'25 contributor."
@@ -39,7 +39,7 @@ body:
     id: terms
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our "[Code of Conduct](https://github.com/PratikMane0112/TelMedSphere/blob/main/.github/CODE_OF_CONDUCT.md)"
+      description: By submitting this issue, you agree to follow our "[Code of Conduct](https://github.com/PratikMane0112/TelMedSphere/blob/master/.github/CODE_OF_CONDUCT.md)"
       options:
-        - label: I agree to follow this project "[Code of Conduct](https://github.com/PratikMane0112/TelMedSphere/blob/main/.github/CODE_OF_CONDUCT.md)"
+        - label: I agree to follow this project "[Code of Conduct](https://github.com/PratikMane0112/TelMedSphere/blob/master/.github/CODE_OF_CONDUCT.md)"
           required: true

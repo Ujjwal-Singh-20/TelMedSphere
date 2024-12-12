@@ -139,13 +139,13 @@ TelMedSphere is designed to make healthcare simple and accessible for both docto
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <h2>📑Contributing Guidelines</h2>
 
-Read our [Contributing Guidelines](https://github.com/PratikMane0112/TelMedSphere/blob/main/.github/CONTRIBUTING_GUIDELINES.md) to learn about our development process, how to propose bugfixes and improvements, and contributions.
+Read our [Contributing Guidelines](https://github.com/PratikMane0112/TelMedSphere/blob/master/.github/CONTRIBUTING_GUIDELINES.md) to learn about our development process, how to propose bugfixes and improvements, and contributions.
 
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
 <h2>📑Code Of Conduct</h2>
 
-TelMedSphere and everyone participating in it is governed by the [Code of Conduct](https://github.com/PratikMane0112/TelMedSphere/blob/main/.github/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code.
+TelMedSphere and everyone participating in it is governed by the [Code of Conduct](https://github.com/PratikMane0112/TelMedSphere/blob/master/.github/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code.
 
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 

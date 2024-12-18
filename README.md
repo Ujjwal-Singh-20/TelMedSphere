@@ -1,14 +1,5 @@
-# <p align="center"> 💖TelMedSphere💖 </p>
+# <p align="center">💖 TelMedSphere 💖</p>
 <!-------------------------------------------------------------------------------------------------------------------------------------->
-<div align="center"> 
-    <h1> 
-        <img src="https://readme-typing-svg.herokuapp.com?font=Jetbrains+mono&size=25&duration=3200&color=4FC3F7&center=true&vCenter=true&width=470&lines=Welcome+to+TELMEDSPHERE💖; Bridging+care+and+technology!;Affordable+healthcare;Your+well-being+reimagined!" alt="Typing SVG"/> 
-    </h1>
-</div>
-<!-------------------------------------------------------------------------------------------------------------------------------------->
-
-![image](https://github.com/PratikMane0112/TelMedSphere/blob/master/Overview/1.png)
-
  <div align="center">
  <p>
 
@@ -32,30 +23,26 @@
 
 <div id="top"></div>
 
-<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+<h2>🧾 Table of Contents</h2>
 
-<h2>Table of Contents 🧾</h2>
-
-- [Introduction📌](#introduction).<br>
-- [Features💡](#features).<br>
-- [Technology Used🚀](#technology-used).<br>
-- [Overview⭐](#overview).<br>
-- [Getting Started💥](#getting-started).<br>
-- [Contributing Guidelines 📑](#contributing-guidelines).<br>
-- [Code Of Conduct 📑](#code-of-conduct).<br>
-- [Project Admin⚡](#project-admin).<br>
-- [Contributing with fun 🧡](#contributing-with-fun).<br>
+ [📌 Introduction](#introduction).<br>
+ [💡 Features](#features).<br>
+ [🚀 Technology Used](#technology-used).<br>
+ [⭐ Overview](#overview).<br>
+ [💥 Getting Started](#getting-started).<br>
+ [📑 Contributing Guidelines](#contributing-guidelines).<br>
+ [📑 Code Of Conduct](#code-of-conduct).<br>
+ [⚡ Project Admin](#project-admin).<br>
+ [🧡 Contributing with fun](#contributing-with-fun).<br>
 <br>
-
-<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
-<h2>Introduction 📌</h2>
+<h2>📌Introduction</h2>
 
 TelMedSphere is designed to make healthcare simple and accessible for both doctors and patients. It allows patients to connect with doctors through video calls, manage their health records, and make payments easily. For doctors, the app provides tools to schedule consultations, write prescriptions, and manage their time effectively.
 
-<h2>Features 💡</h2>
+<h2>💡Features</h2>
 
 🚨 For Patients:<br>
  - Book Video Calls: Easily schedule video consultations with doctors.
@@ -73,7 +60,7 @@ TelMedSphere is designed to make healthcare simple and accessible for both docto
 
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
-<h2>Technology Used 🚀</h2>
+<h2>🚀Technology Used</h2>
 
 <p>
   <a href="https://www.w3schools.com/html/"> <img src="https://img.icons8.com/?size=64&id=20909&format=png" alt="HTML" /></a>
@@ -92,108 +79,62 @@ TelMedSphere is designed to make healthcare simple and accessible for both docto
 🚨 Database: MongoDB <br>
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
-<h2>Overview ⭐</h2>
+<h2>⭐Overview</h2>
 
-<h2>Live Demo</h2>
-
-Check out the live project  ↗(https://pratik0112-telmedsphere.vercel.app/).
-
-
+<h1 align="center"> <a href="https://pratik0112-telmedsphere.vercel.app/"> Live Project Demo ↗️</a></h1>
 
 ![](https://github.com/PratikMane0112/TelMedSphere/blob/master/Overview/1.png)
-<!-- ![](https://github.com/PratikMane0112/TelMedSphere/blob/master/Overview/2.png)
+![](https://github.com/PratikMane0112/TelMedSphere/blob/master/Overview/2.png)
 ![](https://github.com/PratikMane0112/TelMedSphere/blob/master/Overview/3.png)
 ![](https://github.com/PratikMane0112/TelMedSphere/blob/master/Overview/4.png)
 ![](https://github.com/PratikMane0112/TelMedSphere/blob/master/Overview/5.png)
-![](https://github.com/PratikMane0112/TelMedSphere/blob/master/Overview/6.png) -->
+![](https://github.com/PratikMane0112/TelMedSphere/blob/master/Overview/6.png)
 
 
-<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
-
-
-<h3 align="right"><a href="#top">⬆</a></h3>
+<h3 align="right"><a href="#top">⬆️</a></h3>
 
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <h2>💥Getting Started</h2>
 
-### How to make Pull Request?
-
-**1.** Start by forking the [**TelMedSphere**](https://pratik0112-telmedsphere.vercel.app/) repository.
-
-**2.** Clone your forked repository:
-```bash
+- Fork this Repository.
+- Clone the forked repository in your local system.
+  
+ ```bash
  git clone https://github.com/<your-github-username>/TelMedSphere.git
-```
+ ```
 
-**3.** Navigate to new project directory
-```bash
-cd TellMedSphere
-```
+- Navigate to the project directory for frontend Setup.
+  
+ ```bash
+ # Navigate to frontend directory
+ cd frontend    
+ # Install all npm packages for react frontend
+ npm install
+ # Set .env file
+ mv .env.example .env   
+ # Start the frontend 
+ npm run dev    
+ ```
 
-**4.** Create new branch
-```bash
-git checkout -b YOUR_BRANCH_NAME
-```
-
-**5.** Install npm
-``` bash
-npm i
-```
-**5.** Run ther server 
-``` bash
-npm i
-```
-
- # Frontend directory
-
- **1.** Navigate to Frontend directory
-```bash
- cd frontend 
-```
-**2.** Install npm
-``` bash
-npm i
-```
-**3.**  Set .env file
-``` bash
-mv .env.example .env
-```
-**4.**  Run the server
-``` bash
-npm run dev
-```
-
-# Backend directory
-
- **1.** Navigate to Backend directory
-```bash
-  cd backend
-```
-**2.**  Set .env file
-``` bash
-mv .env.example .env
-```
-**3.**  Create a virtual environment
-``` bash
-python -m venv venv # This will create a folder named venv inside your project directory
-```
-**4.**  Activate the virtual environment
-``` bash
+- Navigate to the project directory for backend Setup.
+  
+ ```bash
+ # Navigate to backeend directory
+ cd backend
+ # Set .env file
+ mv .env.example .env
+ # Create a virtual environment
+ python -m venv venv # This will create a folder named venv inside your project directory
+ # Activate the virtual environment
  venv\Scripts\activate
-```
-**5.** Install all dependencies for flask server
-``` bash
+ # Install all dependencies for flask server
  pip install -r requirements.txt     
-```
-**6.** Run flask server
-``` bash
+ # Run flask server
  flask run
-```
-**7.** Deactivate the virtual environment, when you are done
-``` bash
+ # deactivate the virtual environment, when you are done
  deactivate
-```
-<h3 align="right"><a href="#top">⬆</a></h3>
+ ```
+<h3 align="right"><a href="#top">⬆️</a></h3>
 
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <h2>📑Contributing Guidelines</h2>
@@ -222,10 +163,9 @@ TelMedSphere and everyone participating in it is governed by the [Code of Conduc
 </table>
 
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-<h2> Open-Source-Programmes⭐ </h2>
+<h2>🚩Open Source Programs </h2>
 
- ### This project is now OFFICIALLY accepted for
-
+### 💖TelMedSphere is now OFFICIALLY accepted for ...
 <table>
 <tr>
 <td align="center">
@@ -248,6 +188,6 @@ TelMedSphere and everyone participating in it is governed by the [Code of Conduc
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
-<h2><a href="https://discord.gg/qsdDRKak28">Join Discord Server↗</a></h2>
+<h2><a href="https://discord.gg/qsdDRKak28">Join Discord Server↗️</a></h2>
 <h3>🎊 Contributions are always welcome 👨‍💻 Give it a 🌟 if you 🧡 TelMedSphere. Happy Coding !!!!! 🎊</h3>
-<h3 align="right"><a href="#top">⬆</a></h3>
+<h3 align="right"><a href="#top">⬆️</a></h3>

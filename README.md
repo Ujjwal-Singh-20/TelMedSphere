@@ -30,6 +30,7 @@
  [🚀 Technology Used](#technology-used).<br>
  [⭐ Overview](#overview).<br>
  [💥 Getting Started](#getting-started).<br>
+ [🐳 Docker Setup](#docker-setup).<br>
  [📑 Contributing Guidelines](#contributing-guidelines).<br>
  [📑 Code Of Conduct](#code-of-conduct).<br>
  [⚡ Project Admin](#project-admin).<br>
@@ -71,12 +72,14 @@ TelMedSphere is designed to make healthcare simple and accessible for both docto
   <a href="https://www.w3schools.com/python/"> <img src="https://img.icons8.com/?size=64&id=13441&format=png" alt="Python" /></a>
   <a href="https://www.geeksforgeeks.org/flask-tutorial/"><img src="https://img.icons8.com/?size=64&id=ewGOClUtmFX4&format=png" alt="Flask" /></a>
   <a href="https://www.w3schools.com/mongodb/"> <img src="https://img.icons8.com/?size=64&id=74402&format=png" alt="Mongo" /></a>
+  <a href="https://www.educative.io/blog/docker-compose-tutorial" ><img src="https://img.icons8.com/?size=64&id=22813&format=png&color=000000" alt="Docker"></a>
 </p>
 
 🚨 Frontend: HTML, CSS, JS, ReactJs <br>
 🚨 Styling: SCSS <br>
 🚨 Backend: Python, Flask <br>
 🚨 Database: MongoDB <br>
+🚨 Containerization: Docker <br>
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
 <h2>⭐Overview</h2>
@@ -134,6 +137,44 @@ TelMedSphere is designed to make healthcare simple and accessible for both docto
  # deactivate the virtual environment, when you are done
  deactivate
  ```
+<h3 align="right"><a href="#top">⬆️</a></h3>
+
+<!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<h2>🐳 Docker Setup</h2>
+
+Docker provides an easier way to set up and run TelMedSphere with all its dependencies.
+
+### Prerequisites
+- Docker and Docker Compose [installed](https://www.docker.com/products/docker-desktop/) on your system
+- Environment variables ready for configuration
+
+### Steps to Run with Docker
+
+1. Clone the repository same as above:
+
+2. Update Enviroment variables:
+   - Update Environment variables mentioned in docker-compose based on each project's `.env` respectively
+
+
+3. Start the application using Docker Compose:
+```bash
+docker-compose up --build -d
+```
+
+The application will be available at:
+- Frontend: http://localhost:3000
+- Backend: http://localhost:5000
+
+### Stopping the Application
+```bash
+docker-compose down
+```
+
+### Remove the Container
+```bash
+docker-compose kill
+```
+
 <h3 align="right"><a href="#top">⬆️</a></h3>
 
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->

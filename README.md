@@ -1,4 +1,4 @@
-# <p align="center">💖TelMedSphere</p>
+# <p align="center">💖 TelMedSphere 💖</p>
 <!-------------------------------------------------------------------------------------------------------------------------------------->
  <div align="center">
  <p>
@@ -163,8 +163,9 @@ TelMedSphere and everyone participating in it is governed by the [Code of Conduc
 </table>
 
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-<h2>🚩 This project has been part of the following Open Source Programs 🥳</h2>
+<h2>🚩Open Source Programs </h2>
 
+### 💖TelMedSphere is now OFFICIALLY accepted for ...
 <table>
 <tr>
 <td align="center">

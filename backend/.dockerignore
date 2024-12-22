@@ -1,2 +1,4 @@
-venv
+.dockerignore
+.env
 Dockerfile
+venv

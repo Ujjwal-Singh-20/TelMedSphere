@@ -23,7 +23,7 @@ services:
       - "5000:5000"  
     environment:
       # MongoDB URL
-      - DBURL=mongodb+srv://<MongoDB ATLAS CONNECTION STRING>
+      - DBURL=mongodb://MongoUser:MongoPassword@MongoServer
       # NodeMailer
       - HOST_EMAIL=your_host_email
       - PASSWORD=your_app_password

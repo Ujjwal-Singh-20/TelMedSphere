@@ -1,5 +1,4 @@
-# <p align="center"> 💖 💖 TelMedSphere 💖 💖 </p>
-
+# <p align="center">💖 TelMedSphere 💖</p>
 <!-------------------------------------------------------------------------------------------------------------------------------------->
  <div align="center">
  <p>
@@ -17,7 +16,6 @@
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/PratikMane0112/TelMedSphere)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/PratikMane0112/TelMedSphere)
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/PratikMane0112/TelMedSphere)
-
  </p>
  </div>
 
@@ -27,16 +25,16 @@
 
 <h2>🧾 Table of Contents</h2>
 
-[📌 Introduction](#introduction).<br>
-[💡 Features](#features).<br>
-[🚀 Technology Used](#technology-used).<br>
-[⭐ Overview](#overview).<br>
-[💥 Getting Started](#getting-started).<br>
-[🐳 Docker Setup](#docker-setup).<br>
-[📑 Contributing Guidelines](#contributing-guidelines).<br>
-[📑 Code Of Conduct](#code-of-conduct).<br>
-[⚡ Project Admin](#project-admin).<br>
-[🧡 Contributing with fun](#contributing-with-fun).<br>
+ [📌 Introduction](#introduction).<br>
+ [💡 Features](#features).<br>
+ [🚀 Technology Used](#technology-used).<br>
+ [⭐ Overview](#overview).<br>
+ [💥 Getting Started](#getting-started).<br>
+ [🐳 Docker Setup](#docker-setup).<br>
+ [📑 Contributing Guidelines](#contributing-guidelines).<br>
+ [📑 Code Of Conduct](#code-of-conduct).<br>
+ [⚡ Project Admin](#project-admin).<br>
+ [🧡 Contributing with fun](#contributing-with-fun).<br>
 <br>
 
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
@@ -48,20 +46,18 @@ TelMedSphere is designed to make healthcare simple and accessible for both docto
 <h2>💡Features</h2>
 
 🚨 For Patients:<br>
-
-- Book Video Calls: Easily schedule video consultations with doctors.
-- Share Feedback: Rate and review the doctor after your consultation.
-- Manage Your Profile: Update and view your personal details.
-- View Past Records: Check previous orders and prescriptions in one place.
-- Easy Payments: Use the wallet feature powered by Stripe for secure payments.
-
+ - Book Video Calls: Easily schedule video consultations with doctors.
+ - Share Feedback: Rate and review the doctor after your consultation.
+ - Manage Your Profile: Update and view your personal details.
+ - View Past Records: Check previous orders and prescriptions in one place.
+ - Easy Payments: Use the wallet feature powered by Stripe for secure payments.
+ 
 🚨 For Doctors:<br>
-
-- Set Up Your Profile: Add information about yourself and your services.
-- Manage Availability: Set your working hours for consultations.
-- Join Video Calls: Connect with patients at the scheduled time.
-- Write Prescriptions: Share prescriptions directly with patients after the consultation.
-- Queue System: Organize appointments efficiently with a smart queue feature.
+ - Set Up Your Profile: Add information about yourself and your services.
+ - Manage Availability: Set your working hours for consultations.
+ - Join Video Calls: Connect with patients at the scheduled time.
+ - Write Prescriptions: Share prescriptions directly with patients after the consultation.
+ - Queue System: Organize appointments efficiently with a smart queue feature.
 
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
@@ -84,7 +80,6 @@ TelMedSphere is designed to make healthcare simple and accessible for both docto
 🚨 Backend: Python, Flask <br>
 🚨 Database: MongoDB <br>
 🚨 Containerization: Docker <br>
-
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
 <h2>⭐Overview</h2>
@@ -98,6 +93,7 @@ TelMedSphere is designed to make healthcare simple and accessible for both docto
 ![](https://github.com/PratikMane0112/TelMedSphere/blob/master/Overview/5.png)
 ![](https://github.com/PratikMane0112/TelMedSphere/blob/master/Overview/6.png)
 
+
 <h3 align="right"><a href="#top">⬆️</a></h3>
 
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
@@ -105,43 +101,42 @@ TelMedSphere is designed to make healthcare simple and accessible for both docto
 
 - Fork this Repository.
 - Clone the forked repository in your local system.
-
-```bash
-git clone https://github.com/<your-github-username>/TelMedSphere.git
-```
+  
+ ```bash
+ git clone https://github.com/<your-github-username>/TelMedSphere.git
+ ```
 
 - Navigate to the project directory for frontend Setup.
-
-```bash
-# Navigate to frontend directory
-cd frontend
-# Install all npm packages for react frontend
-npm install
-# Set .env file
-mv .env.example .env
-# Start the frontend
-npm run dev
-```
+  
+ ```bash
+ # Navigate to frontend directory
+ cd frontend    
+ # Install all npm packages for react frontend
+ npm install
+ # Set .env file
+ mv .env.example .env   
+ # Start the frontend 
+ npm run dev    
+ ```
 
 - Navigate to the project directory for backend Setup.
-
-```bash
-# Navigate to backeend directory
-cd backend
-# Set .env file
-mv .env.example .env
-# Create a virtual environment
-python -m venv venv # This will create a folder named venv inside your project directory
-# Activate the virtual environment
-venv\Scripts\activate
-# Install all dependencies for flask server
-pip install -r requirements.txt
-# Run flask server
-flask run
-# deactivate the virtual environment, when you are done
-deactivate
-```
-
+  
+ ```bash
+ # Navigate to backeend directory
+ cd backend
+ # Set .env file
+ mv .env.example .env
+ # Create a virtual environment
+ python -m venv venv # This will create a folder named venv inside your project directory
+ # Activate the virtual environment
+ venv\Scripts\activate
+ # Install all dependencies for flask server
+ pip install -r requirements.txt     
+ # Run flask server
+ flask run
+ # deactivate the virtual environment, when you are done
+ deactivate
+ ```
 <h3 align="right"><a href="#top">⬆️</a></h3>
 
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
@@ -150,7 +145,6 @@ deactivate
 Docker provides an easier way to set up and run TelMedSphere with all its dependencies.
 
 ### Prerequisites
-
 - Docker and Docker Compose [installed](https://www.docker.com/products/docker-desktop/) on your system
 - Environment variables ready for configuration
 
@@ -159,28 +153,24 @@ Docker provides an easier way to set up and run TelMedSphere with all its depend
 1. Clone the repository same as above:
 
 2. Update Enviroment variables:
-
    - Update Environment variables mentioned in docker-compose based on each project's `.env` respectively
 
-3. Start the application using Docker Compose:
 
+3. Start the application using Docker Compose:
 ```bash
 docker-compose up --build -d
 ```
 
 The application will be available at:
-
 - Frontend: http://localhost:3000
 - Backend: http://localhost:5000
 
 ### Stopping the Application
-
 ```bash
 docker-compose down
 ```
 
 ### Remove the Container
-
 ```bash
 docker-compose kill
 ```
@@ -217,7 +207,6 @@ TelMedSphere and everyone participating in it is governed by the [Code of Conduc
 <h2>🚩Open Source Programs </h2>
 
 ### 💖TelMedSphere is now OFFICIALLY accepted for ...
-
 <table>
 <tr>
 <td align="center">

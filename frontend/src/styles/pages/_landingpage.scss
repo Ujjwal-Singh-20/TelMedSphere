@@ -512,7 +512,7 @@
             margin: 0 auto;
             padding: 5px;
             justify-content: space-between;
-            align-items: center;
+            align-items: start;
             max-width: 1300px;
 
             @include devices(md) {

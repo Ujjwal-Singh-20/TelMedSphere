@@ -228,7 +228,7 @@ TelMedSphere and everyone participating in it is governed by the [Code of Conduc
 <h2>🫂Project Contributors</h2>
 
 <a href="https://github.com/PratikMane0112/TelMedSphere/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=PratikMane0112/TelMedSphere" />
+  <img src="https://contrib.rocks/image?repo=PratikMane0112/TelMedSphere&cache_burst=1" />
 </a>
 
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->

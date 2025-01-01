@@ -140,7 +140,7 @@ TelMedSphere is designed to make healthcare simple and accessible for both docto
 <h3 align="right"><a href="#top">⬆️</a></h3>
 
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-<h2>🐳 Docker Setup</h2>
+<h2>🐳Docker Setup</h2>
 
 Docker provides an easier way to set up and run TelMedSphere with all its dependencies.
 
@@ -197,9 +197,6 @@ TelMedSphere and everyone participating in it is governed by the [Code of Conduc
 <td align="center">
 <a href="https://github.com/PratikMane0112"><img src="https://avatars.githubusercontent.com/u/153143167?v=4" height="140px" width="140px" alt="Pratik Mane"></a><br><sub><b>Project Admin - Pratik Mane</b></sub>
 </td>
- <td align="center">
-<a href="https://github.com/HarshwardhanPatil07"><img src="https://avatars.githubusercontent.com/u/126240589?v=4" height="140px" width="140px" alt="harshwardhan patil"></a><br><sub><b>Mentor - Harshwardhan Patil</b></sub>
-</td>
 </tr>
 </table>
 
@@ -211,6 +208,10 @@ TelMedSphere and everyone participating in it is governed by the [Code of Conduc
 <tr>
 <td align="center">
 <a href="https://kwoc.kossiitkgp.org/"><img src="https://kwoc.kossiitkgp.org/assets/kwoc_logo-DlraoW8b.png" height="100px" width="100px" alt="KWOC2024"></a><br><sub><b>KWOC 2k24</b></sub>
+</td>
+ <td></td>
+ <td align="center">
+<a href="https://kwoc.kossiitkgp.org/"><img src="https://www.socialwinterofcode.com/img/logos/SWOC_W_Black.png" height="100px" width="100px" alt="SWOC2025"></a><br><sub><b>SWOC 2k25</b></sub>
 </td>
 </tr>
 </table>

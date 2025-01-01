@@ -33,7 +33,7 @@
  [🐳 Docker Setup](#docker-setup).<br>
  [📑 Contributing Guidelines](#contributing-guidelines).<br>
  [📑 Code Of Conduct](#code-of-conduct).<br>
- [⚡ Project Admin](#project-admin).<br>
+ [⚡ Project Admin & Mentors](#project-admin-and-mentors).<br>
  [🧡 Contributing with fun](#contributing-with-fun).<br>
 <br>
 
@@ -105,6 +105,7 @@ TelMedSphere is designed to make healthcare simple and accessible for both docto
  ```bash
  git clone https://github.com/<your-github-username>/TelMedSphere.git
  ```
+<h2>💻Local Setup</h2>
 
 - Navigate to the project directory for frontend Setup.
   
@@ -190,20 +191,26 @@ TelMedSphere and everyone participating in it is governed by the [Code of Conduc
 
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
-<h2>⚡Project Admin</h2>
+<h2>⚡Project Admin and Mentors</h2>
 
 <table>
 <tr>
 <td align="center">
 <a href="https://github.com/PratikMane0112"><img src="https://avatars.githubusercontent.com/u/153143167?v=4" height="140px" width="140px" alt="Pratik Mane"></a><br><sub><b>Project Admin - Pratik Mane</b></sub>
 </td>
+<td align="center">
+<a href="https://github.com/HarshwardhanPatil07"><img src="https://avatars.githubusercontent.com/u/126240589?v=4" height="140px" width="140px" alt="Pratik Mane"></a><br><sub><b>KWoC Mentor - Harshwardhan Patil </b></sub>
+</td>
+<td align="center">
+<a href="https://github.com/AdityaBavadekar"><img src="https://avatars.githubusercontent.com/u/64344960?v=4" height="140px" width="140px" alt="Pratik Mane"></a><br><sub><b>SWoC Mentor - Aditya Bavadekar</b></sub>
+</td>
+
 </tr>
 </table>
 
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-<h2>🚩Open Source Programs </h2>
+<h2>🚩 Project is part of below Open Source Programs </h2>
 
-### 💖TelMedSphere is now OFFICIALLY accepted for ...
 <table>
 <tr>
 <td align="center">

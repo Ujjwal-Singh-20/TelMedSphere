@@ -4,7 +4,7 @@ import useOutsideClose from '../../hooks/useOutsideClose';
 import useScrollDisable from '../../hooks/useScrollDisable';
 import { Alert, CircularProgress } from "@mui/material";
 import httpClient from '../../httpClient';
- 
+
 const AccountForm = () => {
 
     const { isFormOpen, toggleForm, setFormUserInfo } = useContext(commonContext);
@@ -18,6 +18,7 @@ const AccountForm = () => {
     const [specialization, setSpecialization] = useState("");
     const [isInvEmail, setIsInvEmail] = useState(false);
     const [isInvPass, setIsInvPass] = useState(false);
+    const [isInvPhone, setIsInvPhone] = useState(false);
     const [isInvAge, setIsInvAge] = useState(false);
     const [isAlert, setIsAlert] = useState("");
     const [alertCont, setAlertCont] = useState("");
@@ -53,7 +54,7 @@ const AccountForm = () => {
         setIsInvAge(!t);
         return t;
     } 
-
+    
     const checkEmail = (email) => {
         // eslint-disable-next-line
         const res = (/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email));
@@ -67,9 +68,16 @@ const AccountForm = () => {
         return res;
     }
 
+    const validatePhoneNumber = (phoneNumber) => {
+        const pattern = /^\+?1?\d{10,10}$/;
+        const res = pattern.test(phoneNumber);
+        setIsInvPhone(!res);
+        return res;
+    };
+
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        if ( isInvEmail || isInvPass ) {
+        if ( isInvEmail || isInvPass || isInvPhone ) {
             return;
         }
 
@@ -286,11 +294,15 @@ const AccountForm = () => {
                                                     name="phone"
                                                     className="input_field"
                                                     value={phone}
-                                                    onChange={(e) => setPhone(e.target.value)}
+                                                    onChange={(e) => {
+                                                        validatePhoneNumber(e.target.value);
+                                                        setPhone(e.target.value);
+                                                    }}
                                                     required
                                                 />
                                                 <label className="input_label">Phone</label>
                                             </div>
+                                            { phone!=="" && isInvPhone && <Alert severity="error" className='input_alert'>Invalid Phone Number</Alert>}
                                             </>
                                         )
                                     }

@@ -7,19 +7,13 @@ import httpClient from '../../httpClient';
 
 const Profile = () => {
     const { isProfileOpen, toggleProfile, setFormUserInfo } = useContext(commonContext);
-
-    const getLocalStorageValue = (key: string, defaultValue: any) => {
-        const value = localStorage.getItem(key);
-        return value && value !== "undefined" ? value : defaultValue;
-    };
-
-    const [username, setUsername] = useState(getLocalStorageValue("username", ""));
-    const [age, setAge] = useState(getLocalStorageValue("age", ""));
-    const [gender, setGender] = useState(getLocalStorageValue("gender", ""));
-    const [phone, setPhone] = useState(getLocalStorageValue("phone", ""));
-    const [specialization, setSpecialization] = useState(getLocalStorageValue("specialization", ""));
-    const [fee, setFee] = useState(getLocalStorageValue("fee", 199));
-    const email = getLocalStorageValue("email", "");
+    const [username, setUsername] = useState(localStorage.getItem("username") ?? "");
+    const [age, setAge] = useState(localStorage.getItem("age") ?? "");
+    const [gender, setGender] = useState(localStorage.getItem("gender") ?? "");
+    const [phone, setPhone] = useState(localStorage.getItem("phone") ?? "");
+    const [specialization, setSpecialization] = useState(localStorage.getItem("specialization") ?? "");
+    const [fee, setFee] = useState(localStorage.getItem("fee") ?? 199);
+    const email = localStorage.getItem("email") ?? "";
     const [isChPasswd, setChPasswd] = useState(false);
     const [passwd, setPasswd] = useState("");
     const [isInvPass, setIsInvPass] = useState(false);
@@ -27,80 +21,78 @@ const Profile = () => {
     const [isAlert, setIsAlert] = useState("");
     const [alertCont, setAlertCont] = useState("");
     const [isSuccessLoading, setIsSuccessLoading] = useState(false);
-    const isDoctor = getLocalStorageValue("usertype", "") === "doctor";
+    const isDoctor = localStorage.getItem("usertype") === "doctor";
 
-    const profileRef = useRef<HTMLFormElement | null>(null);
+    const profileRef = useRef();
 
     useOutsideClose(profileRef, () => {
         toggleProfile(false);
-        setUsername(getLocalStorageValue("username", ""));
-        setAge(getLocalStorageValue("age", ""));
-        setGender(getLocalStorageValue("gender", ""));
-        setPhone(getLocalStorageValue("phone", ""));
-        setSpecialization(getLocalStorageValue("specialization", ""));
-        setFee(getLocalStorageValue("fee", 199));
+        setUsername(localStorage.getItem("username") ?? "");
+        setAge(localStorage.getItem("age") ?? "");
+        setGender(localStorage.getItem("gender") ?? "");
+        setPhone(localStorage.getItem("phone") ?? "");
+        setSpecialization(localStorage.getItem("specialization") ?? "");
+        setFee(localStorage.getItem("fee") ?? 199);
         setPasswd("");
     });
 
     useScrollDisable(isProfileOpen);
 
-    const checkAge = (age: string) => {
-        const isValid = /^[0-9]{1,3}$/.test(age) && parseInt(age) > 0 && parseInt(age) <= 120;
-        setIsInvAge(!isValid);
-        return isValid;
+    const checkAge = (a) => {
+        const valid = (parseInt(a) > 0 && parseInt(a) <= 120 && /^[0-9]{1,3}$/.test(a));
+        setIsInvAge(!valid);
+        return valid;
     };
 
-    const checkPasswd = (passwd: string) => {
-        const isValid = /^.{6,}$/.test(passwd);
-        setIsInvPass(!isValid);
-        return isValid;
+    const checkPasswd = (passwd) => {
+        const valid = (/^.{6,}$/.test(passwd));
+        setIsInvPass(!valid);
+        return valid;
     };
 
-    const handleFormSubmit = async (e: React.FormEvent) => {
+    const handleFormSubmit = (e) => {
         e.preventDefault();
-        if (isInvAge || (isChPasswd && isInvPass)) return;
+        if (isInvAge || (isChPasswd && isInvPass)) {
+            return;
+        }
 
         setIsSuccessLoading(true);
 
-        try {
-            await httpClient.put('/update_details', {
-                email,
-                username,
-                usertype: isDoctor ? "doctor" : "patient",
-                age,
-                specialization,
-                gender,
-                phone,
-                passwd,
-                fee,
-            });
+        httpClient.put('/update_details', {
+            email: email,
+            username: username,
+            usertype: isDoctor ? "doctor" : "patient",
+            age: age,
+            specialization: specialization,
+            gender: gender,
+            phone: phone,
+            passwd: passwd,
+            fee: fee
+        })
+        .then(() => {
             setIsSuccessLoading(false);
             setIsAlert("success");
             setAlertCont("Successfully updated");
             setTimeout(() => {
-                setFormUserInfo({
-                    username,
-                    usertype: isDoctor ? "doctor" : "patient",
-                    gender,
-                    phone,
-                    email,
-                    passwd: passwd || getLocalStorageValue("passwd", ""),
-                    specialization,
-                    age,
-                    fee,
-                });
+                setIsAlert("");
+                setAlertCont("");
+                setFormUserInfo({ username, usertype: isDoctor ? "doctor" : "patient", gender, phone, email, passwd: passwd ?? localStorage.getItem('passwd'), specialization, age, fee });
                 toggleProfile(false);
             }, 1000);
-        } catch {
+        })
+        .catch(() => {
             setIsSuccessLoading(false);
             setIsAlert("error");
-            setAlertCont("Something went wrong. Please try again later.");
-        } finally {
+            setAlertCont("Something went wrong. Please try again later");
             setTimeout(() => {
                 setIsAlert("");
                 setAlertCont("");
             }, 1000);
-        }
+        });
+    };
+
+    const renderAlert = () => {
+        return isAlert && <Alert severity={isAlert} className='form_sucess_alert'>{alertCont}</Alert>;
     };
 
     return (
@@ -109,42 +101,182 @@ const Profile = () => {
                 <div className="backdrop">
                     <div className="modal_centered">
                         <form id="account_form" ref={profileRef} onSubmit={handleFormSubmit}>
-                            {isAlert && <Alert severity={isAlert} className="form_success_alert">{alertCont}</Alert>}
+                            {renderAlert()}
+
+                            {/*===== Form-Header =====*/}
                             <div className="form_head">
                                 <h2>Profile</h2>
                                 <p>Check your profile</p>
                             </div>
+
+                            {/*===== Form-Body =====*/}
                             <div className="form_body">
                                 <div className="input_box">
                                     <input
                                         type="text"
-                                        id="username"
                                         name="username"
                                         className="input_field"
                                         value={username}
                                         onChange={(e) => setUsername(e.target.value)}
                                         required
                                     />
-                                    <label htmlFor="username" className="input_label">Username</label>
+                                    <label className="input_label">Username</label>
                                 </div>
+
                                 {isDoctor && (
                                     <div className="input_box">
                                         <input
                                             type="text"
-                                            id="specialization"
                                             name="specialization"
                                             className="input_field"
                                             value={specialization}
                                             onChange={(e) => setSpecialization(e.target.value)}
                                             required
                                         />
-                                        <label htmlFor="specialization" className="input_label">
-                                            Specialization (Eg. Cancer Surgeon)
-                                        </label>
+                                        <label className="input_label">Specialization {"(Eg. Cancer Surgeon)"}</label>
                                     </div>
                                 )}
-                    
+
+                                {!isDoctor && (
+                                    <div>
+                                        <div className="input_box">
+                                            <input
+                                                type="text"
+                                                name="age"
+                                                className="input_field"
+                                                value={age}
+                                                onChange={(e) => {
+                                                    checkAge(e.target.value);
+                                                    setAge(e.target.value);
+                                                }}
+                                                required
+                                            />
+                                            <label className="input_label">Age</label>
+                                        </div>
+                                        {age !== "" && isInvAge && <Alert severity="error" className='form_sucess_alert'>Invalid Age</Alert>}
+                                    </div>
+                                )}
+
+                                <div className="input_box">
+                                    <label className="radio_label">Gender</label>
+                                    <div className='radio_inputs'>
+                                        <input
+                                            type="radio"
+                                            name="gender"
+                                            className="radio_input_field"
+                                            value="male"
+                                            checked={gender === "male"}
+                                            onChange={(e) => setGender(e.target.value)}
+                                        /> <label className='radio_input_label'>Male</label>
+                                        <input
+                                            type="radio"
+                                            name="gender"
+                                            className="radio_input_field"
+                                            value="female"
+                                            checked={gender === "female"}
+                                            onChange={(e) => setGender(e.target.value)}
+                                        /> <label className='radio_input_label'>Female</label>
+                                        <input
+                                            type="radio"
+                                            name="gender"
+                                            className="radio_input_field"
+                                            value="other"
+                                            checked={gender === "other"}
+                                            onChange={(e) => setGender(e.target.value)}
+                                        /> <label className='radio_input_label'>Other</label>
+                                    </div>
+                                </div>
+
+                                <div className="input_box">
+                                    <input
+                                        type="text"
+                                        name="phone"
+                                        className="input_field"
+                                        value={phone}
+                                        onChange={(e) => setPhone(e.target.value)}
+                                        required
+                                    />
+                                    <label className="input_label">Phone</label>
+                                </div>
+
+                                {isDoctor && (
+                                    <div className="input_box">
+                                        <input
+                                            type="number"
+                                            name="fee"
+                                            className="input_field"
+                                            value={fee}
+                                            onChange={(e) => setFee(e.target.value)}
+                                            min={1}
+                                            required
+                                        />
+                                        <label className="input_label">Fee</label>
+                                    </div>
+                                )}
+                                <div>
+                                    <div className="input_box">
+                                        <input
+                                            type="text"
+                                            name="email"
+                                            className="input_field disabled"
+                                            value={email}
+                                            disabled
+                                        />
+                                        <label className="input_label">Email</label>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div className="check_box">
+                                        <input
+                                            type="checkbox"
+                                            name="passcheck"
+                                            className="check_field"
+                                            checked={isChPasswd}
+                                            onChange={() => setChPasswd((prev) => !prev)}
+                                        />
+                                        <label className="radio_input_label" onClick={() => setChPasswd((prev) => !prev)}> Wanna change password?</label>
+                                    </div>
+                                </div>
+
+                                {isChPasswd && (
+                                    <div>
+                                        <div className="input_box">
+                                            <input
+                                                type="password"
+                                                name="password"
+                                                className="input_field"
+                                                value={passwd}
+                                                onChange={(e) => {
+                                                    checkPasswd(e.target.value);
+                                                    setPasswd(e.target.value);
+                                                }}
+                                                required
+                                                autoComplete=""
+                                            />
+                                            <label className="input_label">Update Password</label>
+                                        </div>
+                                        {passwd !== "" && isInvPass && <Alert severity="warning" className='input_alert'>Password should contain atleast 6 characters</Alert>}
+                                    </div>
+                                )}
+
+                                <button
+                                    type="submit"
+                                    className="btn login_btn"
+                                    disabled={isInvAge || isInvPass}
+                                >
+                                    {isSuccessLoading ? (
+                                        <CircularProgress size={24} sx={{ color: "#f5f5f5" }} />
+                                    ) : "Update"}
+                                </button>
                             </div>
+
+                            {/*===== Form-Close-Btn =====*/}
+                            <div
+                                className="close_btn"
+                                title="Close"
+                                onClick={() => toggleProfile(false)}
+                            ></div>
                         </form>
                     </div>
                 </div>

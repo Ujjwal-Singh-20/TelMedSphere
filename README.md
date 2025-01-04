@@ -115,7 +115,8 @@ TelMedSphere is designed to make healthcare simple and accessible for both docto
  # Install all npm packages for react frontend
  npm install
  # Set .env file
- mv .env.example .env   
+ copy .env.example .env
+ # (For linux) cp .env.example .env
  # Start the frontend 
  npm run dev    
  ```
@@ -126,7 +127,8 @@ TelMedSphere is designed to make healthcare simple and accessible for both docto
  # Navigate to backeend directory
  cd backend
  # Set .env file
- mv .env.example .env
+ copy .env.example .env
+ # (For linux) cp .env.example .env
  # Create a virtual environment
  python -m venv venv # This will create a folder named venv inside your project directory
  # Activate the virtual environment

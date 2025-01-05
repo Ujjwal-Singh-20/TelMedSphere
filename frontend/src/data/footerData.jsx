@@ -46,7 +46,7 @@ export const footMenu = [
 export const footSocial = [
     {
         id: 1,
-        icon: <GitHub />,
+        icon: <FaGithub />,
         cls: "GitHub",
         path: "https://github.com/PratikMane0112/TelMedSphere",
     },

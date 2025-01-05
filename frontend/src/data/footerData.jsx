@@ -49,7 +49,7 @@ export const footSocial = [
         icon: <GitHub />,
         cls: "GitHub",
         path: "https://github.com/PratikMane0112/TelMedSphere",
-    }
+    },
        {
         id: 2,
         icon: <IoMdMail />,

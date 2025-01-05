@@ -2,10 +2,23 @@
     background-color: var(--blue-color-1);
     color: var(--blue-color-8);
     @include padding-y(3rem, 2rem);
+    animation: fadeIn 1s ease-out;  // Fade-in animation for footer
+    margin-top: 50px;  // Add some space between content and footer for better clarity when scrolling
+    position: relative;  // Normal flow positioning
 
     .separator {
         @include margin-y(2.5rem, 2rem);
         opacity: 0.7;
+    }
+}
+
+/* Fade-in animation for footer */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
@@ -61,14 +74,16 @@
         }
 
         li {
-            
             transition: all 0.3s ease-in-out;
+
             &:hover, &:active {
                 margin-left: 10px;
 
                 a {
                     opacity: 1;
                     text-decoration: underline;
+                    color: #007BFF;  // Hover color for links
+                    transform: translateX(5px);  // Slight movement on hover
                 }
             }
         }
@@ -76,6 +91,13 @@
         a {
             font-size: 0.9rem;
             opacity: 0.8;
+            transition: color 0.3s ease-in-out, transform 0.3s ease;
+
+            &:hover {
+                color: #007BFF;  // Hover color for links
+                transform: translateX(5px);  // Slight movement on hover
+                text-decoration: underline;
+            }
         }
     }
 }
@@ -111,11 +133,16 @@
     font-size: 1.2rem;
     margin-right: 4rem;
 
-
     .icon {
         transition: all 0.3s ease-in-out;
         &:hover {
-            color: var(--blue-color-9);
+            color: var(--blue-color-9);  // Hover effect for social icons
+            transform: scale(1.1);  // Slight scaling on hover
         }
     }
+}
+
+/* Add background gradient effect for footer */
+#footer {
+    background: linear-gradient(135deg, var(--blue-color-1), var(--blue-color-2));
 }

@@ -46,18 +46,24 @@ export const footMenu = [
 export const footSocial = [
     {
         id: 1,
+        icon: <FaGithub />,
+        cls: "GitHub",
+        path: "https://github.com/PratikMane0112/TelMedSphere",
+    },
+       {
+        id: 2,
         icon: <IoMdMail />,
         cls: "Mail",
         path: "/",
     },
     {
-        id: 2,
+        id: 3,
         icon: <FaPhoneAlt />,
         cls: "phone",
         path: "/",
     },
     {
-        id: 3,
+        id: 4,
         icon: <FaHospital />,
         cls: "Hospital",
         path: "/",

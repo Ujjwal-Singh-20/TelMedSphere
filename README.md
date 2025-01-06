@@ -181,6 +181,13 @@ docker-compose kill
 <h3 align="right"><a href="#top">⬆️</a></h3>
 
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+## How to Get `.env` File Variables
+
+Refer to the [EnvVarSetUpGuideline.md](.github/EnvVarSetUpGuideline.md) for detailed steps on setting up the `.env` files for both the frontend and backend.
+
+
+<!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <h2>📑Contributing Guidelines</h2>
 
 Read our [Contributing Guidelines](https://github.com/PratikMane0112/TelMedSphere/blob/master/.github/CONTRIBUTING_GUIDELINES.md) to learn about our development process, how to propose bugfixes and improvements, and contributions.

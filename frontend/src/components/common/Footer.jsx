@@ -26,7 +26,7 @@ const Footer = () => {
                                     {menu.map(item => {
                                         const { id, link, path } = item;
                                         return (
-                                            <li key={id}>
+                                            <li key={id} className='flex gap-2 items-center' >
                                                 <TfiAngleRight className='arrow-icon' />
                                                 <Link to={path} className="footer-link">
                                                     {link}

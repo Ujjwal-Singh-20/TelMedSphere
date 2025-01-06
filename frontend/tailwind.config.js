@@ -56,13 +56,6 @@ module.exports = {
       fontFamily: {
         sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
       },
-      spacing: {
-        2.5: "0.625rem",
-        5: "1.25rem",
-      },
-      boxShadow: {
-        text: "1px 1px 2px rgba(255, 215, 0, 0.8)",
-      },
       screens: {
         xl: "1400px",
         lg: "1024px",
@@ -71,11 +64,8 @@ module.exports = {
         xs: "480px",
         xxs: "400px",
       },
+      darkMode: "class",
     },
   },
-  plugins: [
-    require("@tailwindcss/typography"),
-    require("@tailwindcss/forms"),
-    require("@tailwindcss/aspect-ratio"),
-  ],
+  plugins: [],
 };

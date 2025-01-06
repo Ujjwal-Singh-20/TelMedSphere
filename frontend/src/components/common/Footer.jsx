@@ -54,7 +54,7 @@ const Footer = () => {
                     <div className="sub_footer_wrapper">
                         <div className="foot_copyright">
                             <p>
-                                2024 @ <a href="/">TelMedSphere</a> | All Rights Reserved.
+                            {new Date().getFullYear()} @ <a href="/">TelMedSphere</a> | All Rights Reserved.
                             </p>
                         </div>
                         <div className="foot_social">

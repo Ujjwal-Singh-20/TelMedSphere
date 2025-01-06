@@ -18,7 +18,7 @@ const CartItem = (props) => {
 
     return (
         <>
-            <div className="cart_item">
+            <div className="cart_item bg-blue">
                 <figure className="cart_item_img">
                     <Link to={`/all-medicines/medicine-details/${id}`}>
                         <img src={images[0]} alt="product-img" />

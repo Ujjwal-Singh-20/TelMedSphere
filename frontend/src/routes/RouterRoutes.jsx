@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router";
 import useScrollRestore from "../hooks/useScrollRestore";
 import LandingPage from "../pages/LandingPage";
+import AboutUs from "../pages/AboutUs"
 import Home from "../pages/Home";
 import Doctors from "../pages/Doctors";
 import BuyMedicines from "../pages/Medicines";
@@ -9,6 +10,7 @@ import MedicineDetails from "../pages/MedicineDetails";
 import Cart from "../pages/Cart";
 import AllMedicines from "../pages/AllMedicines";
 import MeetPage from "../pages/MeetPage";
+import ContactUs from "../pages/ContactUs";
 import Success from "../pages/Success";
 import Failed from "../pages/Failed";
 import DiseasePrediction from "../pages/DiseasePrediction";
@@ -47,7 +49,9 @@ const RouterRoutes = () => {
         <Route path="/my-orders" element={<MyOrders />} />
         <Route path="/my-wallet" element={<MyWallet />} />
         <Route path="/recent-transactions" element={<RecentTransactions />} />
-
+        <Route path="/contact" element={<ContactUs />} />
+        {/* Add About Us route */}
+        <Route path="/about" element={<AboutUs />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>

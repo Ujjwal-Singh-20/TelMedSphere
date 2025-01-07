@@ -20,56 +20,44 @@ jobs:
 
       # Respond to new issues
       - name: Respond to new issues
-        if: ${{ github.event_name == 'issues' && github.event.action == 'opened' }}
-        run: |
-          echo "Hey @${{ github.actor }}, Welcome to 💖TelMedSphere! 🎊" > comment.txt
-          echo "Thanks for opening an issue! 🙌 Please wait for the issue to be assigned." >> comment.txt
-          echo "Happy Coding!! ✨" >> comment.txt
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: ${{ github.event.action == 'opened' && github.event_name == 'issues' }}
         uses: peter-evans/create-or-update-comment@v3
         with:
           issue-number: ${{ github.event.issue.number }}
-          body-path: comment.txt
+          body: |
+            Hey @${{ github.actor }}, Welcome to 💖TelMedSphere!!!! 🎊
+            Thanks for opening an issue! 🙌 Please wait for the issue to be assigned.
+            Happy Coding!! ✨
 
       # Respond to closed issues
       - name: Respond to closed issues
-        if: ${{ github.event_name == 'issues' && github.event.action == 'closed' }}
-        run: |
-          echo "Hello @${{ github.event.issue.user.login }}! Your issue #${{ github.event.issue.number }} has been closed." > comment.txt
-          echo "Thank you for your contribution to 💖TelMedSphere!!! 🙌" >> comment.txt
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: ${{ github.event.action == 'closed' && github.event_name == 'issues' }}
         uses: peter-evans/create-or-update-comment@v3
         with:
           issue-number: ${{ github.event.issue.number }}
-          body-path: comment.txt
+          body: |
+            Hello @${{ github.event.issue.user.login }}! Your issue #${{ github.event.issue.number }} has been closed.
+            Thank you for your contribution to 💖TelMedSphere!!! 🙌
 
       # Respond to new PRs
       - name: Respond to new PRs
-        if: ${{ github.event_name == 'pull_request' && github.event.action == 'opened' }}
-        run: |
-          echo "Hey @${{ github.actor }}, Welcome to 💖TelMedSphere 🎊" > comment.txt
-          echo "Thanks for your contribution! Your effort makes this project better. Keep it up! 🙌" >> comment.txt
-          echo "Please wait for the PR to be reviewed." >> comment.txt
-          echo "Happy Coding!! ✨" >> comment.txt
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: ${{ github.event.action == 'opened' && github.event_name == 'pull_request' }}
         uses: peter-evans/create-or-update-comment@v3
         with:
           issue-number: ${{ github.event.pull_request.number }}
-          body-path: comment.txt
+          body: |
+            Hey @${{ github.actor }}, Welcome to 💖TelMedSphere 🎊
+            Thanks for your contribution! Your effort makes this project better. Keep it up! 🙌
+            Please wait for the PR to be reviewed.
+            Happy Coding!! ✨
 
       # Respond to merged PRs
       - name: Respond to merged PRs
-        if: ${{ github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged }}
-        run: |
-          echo "@${{ github.event.pull_request.user.login }} Congrats, Your pull request has been successfully merged 🥳🎉" > comment.txt
-          echo "Thank you for your contribution to 💖TelMedSphere!!" >> comment.txt
-          echo "Happy coding 🎊, Keep Contributing 🙌 !!!" >> comment.txt
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: ${{ github.event.action == 'closed' && github.event.pull_request.merged == true }}
         uses: peter-evans/create-or-update-comment@v3
         with:
           issue-number: ${{ github.event.pull_request.number }}
-          body-path: comment.txt
+          body: |
+            @${{ github.event.pull_request.user.login }} Congrats, Your pull request has been successfully merged 🥳🎉
+            Thank you for your contribution to 💖TelMedSphere!!
+            Happy coding 🎊, Keep Contributing 🙌 !!!

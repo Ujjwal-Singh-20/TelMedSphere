@@ -9,6 +9,7 @@ import MedicineDetails from "../pages/MedicineDetails";
 import Cart from "../pages/Cart";
 import AllMedicines from "../pages/AllMedicines";
 import MeetPage from "../pages/MeetPage";
+import ContactUs from "../pages/ContactUs";
 import Success from "../pages/Success";
 import Failed from "../pages/Failed";
 import DiseasePrediction from "../pages/DiseasePrediction";
@@ -47,6 +48,7 @@ const RouterRoutes = () => {
         <Route path="/my-orders" element={<MyOrders />} />
         <Route path="/my-wallet" element={<MyWallet />} />
         <Route path="/recent-transactions" element={<RecentTransactions />} />
+        <Route path="/contact" element={<ContactUs />} />
 
         <Route path="*" element={<ErrorPage />} />
       </Routes>

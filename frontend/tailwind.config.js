@@ -2,7 +2,6 @@
 
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("./colors");
-const { yearCalendarClasses } = require('@mui/x-date-pickers');
 
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./src/index.html"],

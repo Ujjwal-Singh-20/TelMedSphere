@@ -32,7 +32,7 @@ export const footMenu = [
             {
                 id: 2,
                 link: "Contact Us",
-                path: "/"
+                path: "/contact"
             },
             {
                 id: 3,

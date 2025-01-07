@@ -647,4 +647,25 @@ def get_wallet_history():
         return jsonify({'message': 'Wallet history', 'wallet_history': var.get('wallet_history', [])}), 200
 
 
-
+# ----------- email for contact us routes -----------------
+@app.route('/contact', methods=['POST'])
+def contact():
+    data = request.json
+    try:
+        # Send email notification
+        msg = Message(
+            subject=f"New Contact Form Submission: {data['subject']}",
+            sender=data['email'],
+            recipients=["telmedsphere489@gmail.com"],
+            body=f"""
+            New contact form submission from:
+            Name: {data['name']}
+            Email: {data['email']}
+            Subject: {data['subject']}
+            Message: {data['message']}
+            """
+        )
+        mail.send(msg)
+        return jsonify({"message": "Message sent successfully"}), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500

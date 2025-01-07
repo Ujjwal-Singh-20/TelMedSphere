@@ -11,40 +11,45 @@ import commonContext from "../contexts/common/commonContext";
 import useScrollDisable from "../hooks/useScrollDisable";
 
 const Cart = () => {
-
   const { isLoading, toggleLoading } = useContext(commonContext);
 
   useDocTitle("Cart");
 
-  const navigate = useNavigate(); 
-  const userNotExists = localStorage.getItem("usertype")===undefined || localStorage.getItem("usertype")===null;
+  const navigate = useNavigate();
+  const userNotExists =
+    localStorage.getItem("usertype") === undefined ||
+    localStorage.getItem("usertype") === null;
   const [cart, setCart] = useState([]);
-  const { cartItems, clearCart, placeOrder, setCartItems } = useContext(cartContext);
+  const { cartItems, clearCart, placeOrder, setCartItems } =
+    useContext(cartContext);
 
   useEffect(() => {
-      if(userNotExists) {
-          navigate("/");
-      } else {
-          toggleLoading(true);
-          if (cart !== cartItems) {
-            httpClient.post('add_to_cart', {email: localStorage.getItem("email"), cart: cartItems})
-            .then((res) => {
-              setCartItems(res.data.cart);
-              setCart(res.data.cart);
-              toggleLoading(false);
-            })
-            .catch((err) => { 
-              console.log(err);
-              toggleLoading(false);
-            });
-          }
+    if (userNotExists) {
+      navigate("/");
+    } else {
+      toggleLoading(true);
+      if (cart !== cartItems) {
+        httpClient
+          .post("add_to_cart", {
+            email: localStorage.getItem("email"),
+            cart: cartItems,
+          })
+          .then((res) => {
+            setCartItems(res.data.cart);
+            setCart(res.data.cart);
+            toggleLoading(false);
+          })
+          .catch((err) => {
+            console.log(err);
+            toggleLoading(false);
+          });
       }
-      //eslint-disable-next-line
+    }
+    //eslint-disable-next-line
   }, []);
 
-
   useScrollDisable(isLoading);
-  
+
   const cartQuantity = cartItems.length;
 
   // total original price
@@ -54,41 +59,49 @@ const Cart = () => {
   const [balance, setBalance] = useState(0);
   const [addBalance, setAddBalance] = useState(false);
   const [totalBalance, setTotalBalance] = useState(cartTotal);
-  
-  
+
   useEffect(() => {
     setCartTotal(0);
     setTotalBalance(0);
     cartItems.forEach((item) => {
-      setCartTotal(prev => prev + (item.price * item.quantity));
-      setTotalBalance(prev => prev + (item.price * item.quantity));  
+      setCartTotal((prev) => prev + item.price * item.quantity);
+      setTotalBalance((prev) => prev + item.price * item.quantity);
     });
     // console.log(cartItems);
-    httpClient.post('/get_wallet', {email: localStorage.getItem("email")})
-    .then((res) => {
-      setBalance(Number(res.data.wallet))
-    });
+    httpClient
+      .post("/get_wallet", { email: localStorage.getItem("email") })
+      .then((res) => {
+        setBalance(Number(res.data.wallet));
+      });
   }, [cartItems]);
 
-  
   // setTotalBalance(cartTotal);
-
 
   const [isCheckoutLoading, setIsCheckoutLoading] = useState(false);
   const [isAlert, setIsAlert] = useState(0);
 
   const deleteAll = () => {
-    httpClient.post('delete_all_cart', {email: localStorage.getItem("email")})
+    httpClient.post("delete_all_cart", {
+      email: localStorage.getItem("email"),
+    });
+  };
+
+  if (isLoading) {
+    return <Preloader />;
   }
 
-  if(isLoading) {
-    return <Preloader />;
-  };
-  
   return (
     <>
-      <section id="cart" className="section">
-        <div className="container">
+      <section id="" className="text-blue-19 py-32 overflow-hidden">
+        <div
+          className="max-w-[1440px] mx-auto px-3
+            xl:max-w-[1280px]
+            lg:max-w-[1024px]
+            md:max-w-[768px]
+            sm:max-w-[640px]
+            xs:w-full
+          "
+        >
           {cartQuantity === 0 ? (
             <EmptyView
               msg="Your Cart is Empty"
@@ -105,7 +118,14 @@ const Cart = () => {
 
               <div className="cart_right_col">
                 <div className="clear_cart_btn">
-                  <button onClick={() => {clearCart();deleteAll()} }>Clear Cart</button>
+                  <button
+                    onClick={() => {
+                      clearCart();
+                      deleteAll();
+                    }}
+                  >
+                    Clear Cart
+                  </button>
                 </div>
                 <div className="order_summary">
                   <h3>
@@ -128,20 +148,27 @@ const Cart = () => {
                     </div>
                   </div>
 
-                  <div onClick={() => {
-                    console.log(cartTotal);
-                    if(!addBalance) {
-                      if(cartTotal <= balance) {
-                        setTotalBalance(0);
+                  <div
+                    onClick={() => {
+                      console.log(cartTotal);
+                      if (!addBalance) {
+                        if (cartTotal <= balance) {
+                          setTotalBalance(0);
+                        } else {
+                          setTotalBalance(cartTotal - balance);
+                        }
                       } else {
-                        setTotalBalance(cartTotal - balance);
+                        setTotalBalance(cartTotal);
                       }
-                    } else {
-                      setTotalBalance(cartTotal);
-                    }
-                    setAddBalance(prev => !prev);
-                  }} className="use-balance-div">
-                    <input type="checkbox" checked={addBalance} onChange={() => {}}/>
+                      setAddBalance((prev) => !prev);
+                    }}
+                    className="use-balance-div"
+                  >
+                    <input
+                      type="checkbox"
+                      checked={addBalance}
+                      onChange={() => {}}
+                    />
                     <p>Use Wallet Money {`(₹ ${balance})`}</p>
                   </div>
 
@@ -152,18 +179,27 @@ const Cart = () => {
                       isCheckoutLoading && "active"
                     }`}
                     onClick={() => {
-                      if (totalBalance===0){
-                        httpClient.post('/debit_wallet', {email: localStorage.getItem("email"), walletAmount: cartTotal})
+                      if (totalBalance === 0) {
+                        httpClient.post("/debit_wallet", {
+                          email: localStorage.getItem("email"),
+                          walletAmount: cartTotal,
+                        });
                         localStorage.setItem("totalPrice", cartTotal);
                         // cartItems.forEach((item) => {
                         //   placeOrder(item);
                         // });
-                        localStorage.setItem("orders", JSON.stringify(cartItems))
-                        window.location.href = "https://gfg-sfi.onrender.com/success";
-                      } 
-                      else{
+                        localStorage.setItem(
+                          "orders",
+                          JSON.stringify(cartItems)
+                        );
+                        window.location.href =
+                          "https://gfg-sfi.onrender.com/success";
+                      } else {
                         setIsCheckoutLoading(true);
-                        httpClient.post('/debit_wallet', {email: localStorage.getItem("email"), walletAmount: balance})
+                        httpClient.post("/debit_wallet", {
+                          email: localStorage.getItem("email"),
+                          walletAmount: balance,
+                        });
                         setTimeout(() => {
                           localStorage.setItem("totalPrice", cartTotal);
                           cartItems.forEach((item) => {
@@ -174,7 +210,6 @@ const Cart = () => {
                           setIsAlert(2);
                         }, 2000);
                       }
-                      
                     }}
                   >
                     {isCheckoutLoading ? (

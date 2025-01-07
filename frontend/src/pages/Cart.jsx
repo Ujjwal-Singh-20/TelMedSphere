@@ -92,7 +92,7 @@ const Cart = () => {
 
   return (
     <>
-      <section id="" className="text-blue-19 py-32 overflow-hidden">
+      <section id="" className="text-blue-8 py-32 overflow-hidden">
         <div
           className="max-w-[1440px] mx-auto px-3
             xl:max-w-[1280px]

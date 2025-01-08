@@ -10,6 +10,10 @@ on:
       - opened
       - closed
 
+permissions:
+  issues: write
+  pull-requests: write
+
 jobs:
   respond-to-events:
     runs-on: ubuntu-latest
@@ -47,7 +51,7 @@ jobs:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
             Hey @${{ github.actor }}, Welcome to 💖TelMedSphere !!! 🎊
-            Thanks for raising PR, Your effort makes this project better. 🙌
+            Thanks for raising a PR! Your effort makes this project better. 🙌
             Please wait for the PR to be reviewed.
             Happy Coding!! ✨
 
@@ -61,3 +65,14 @@ jobs:
             @${{ github.event.pull_request.user.login }} Congrats, Your pull request has been successfully merged 🥳🎉
             Thank you for your contribution to 💖TelMedSphere !!!
             Happy coding 🎊, Keep Contributing 🙌 !!!
+
+      # Respond to closed PRs (not merged)
+      - name: Respond to closed PRs (not merged)
+        if: ${{ github.event.action == 'closed' && github.event.pull_request.merged == false }}
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            Hello @${{ github.event.pull_request.user.login }}, your PR #${{ github.event.pull_request.number }} has been closed without merging. 😞
+            Don't be discouraged! Please feel free to address any review comments or reopen the PR if necessary.
+            Thank you for your effort and interest in 💖TelMedSphere !!! 🙌

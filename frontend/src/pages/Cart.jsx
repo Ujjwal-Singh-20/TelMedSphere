@@ -185,7 +185,7 @@ const Cart = () => {
                           JSON.stringify(cartItems)
                         );
                         window.location.href =
-                          "https://gfg-sfi.onrender.com/success";
+                          "https://telmedsphere-server.vercel.app/success";
                       } else {
                         setIsCheckoutLoading(true);
                         httpClient.post("/debit_wallet", {

@@ -93,15 +93,7 @@ const Cart = () => {
   return (
     <>
       <section id="" className="text-blue-8 py-32 overflow-hidden">
-        <div
-          className="max-w-[1440px] mx-auto px-3
-            xl:max-w-[1280px]
-            lg:max-w-[1024px]
-            md:max-w-[768px]
-            sm:max-w-[640px]
-            xs:w-full
-          "
-        >
+        <div className="max-w-[1440px] mx-auto px-3 container">
           {cartQuantity === 0 ? (
             <EmptyView
               msg="Your Cart is Empty"
@@ -109,14 +101,14 @@ const Cart = () => {
               btnText="Start Shopping"
             />
           ) : (
-            <div className="wrapper cart_wrapper">
-              <div className="cart_left_col">
+            <div className="grid grid-cols-7 items-start max-lg:grid-cols-1 overflow-x-hidden overflow-y-auto gap-8">
+              <div className="col-span-4 max-h-[600px] py-6 max-lg:px-6 sm:p-4">
                 {cartItems.map((item) => (
                   <CartItem key={item.id} {...item} />
                 ))}
               </div>
 
-              <div className="cart_right_col">
+              <div className="col-span-3">
                 <div className="clear_cart_btn">
                   <button
                     onClick={() => {

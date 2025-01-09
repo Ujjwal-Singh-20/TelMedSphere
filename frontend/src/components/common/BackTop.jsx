@@ -212,7 +212,7 @@ const handleSend = async (msg) => {
       >
         {open? <MdClear /> : <AiFillWechat />}
       </div>
-      <div className={`fixed right-[1.5w] bg-white-1 z-40 shadow-[0_0_10px_1px_var(--blue-color-2)] border-[2px] border-blue-2 rounded-[10px] pt-4 transition-all duration-300 ease-in-out hidden opacity-0 w-0 bottom-[10vh] h-0 ${open && "bottom-[13vh] w-[300px] visible opacity-100 h-[450px]"}`}>
+      <div className={`fixed right-[1.5vw] bg-white-1 z-40 border-[2px] border-blue-2 rounded-[10px] pt-4 transition-all duration-300 ease-in-out opacity-0 w-0 bottom-[10vh] h-0 ${open && "bottom-[13vh] w-[300px] visible opacity-100 h-[450px]"}`}>
         <div className="w-full h-full bg-white overflow-auto rounded-[10px]">
           <MainContainer
           style={{border: 0, borderRadius: 10}}

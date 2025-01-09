@@ -196,7 +196,7 @@ const handleSend = async (msg) => {
     <>
       {!open && (
         <div
-        className={`fixed bottom-[13vh] right-[1.5vw] z-30 bg-blue-9 text-white-1 text-[1.4rem] p-2 cursor-pointer rounded-[3px] transform scale-0 items-center opacity-0 transition-all duration-300 hover:bg-blue-8 ${
+        className={`fixed bottom-[13vh] right-[1.7vw] z-30 bg-blue-9 text-white-1 text-[1.4rem] p-2 cursor-pointer rounded-[3px] transform scale-0 items-center opacity-0 transition-all duration-300 hover:bg-blue-8 max-lg:bottom-[11vh] max-lg:right-[2vw] ${
           isVisible ? "scale-100 opacity-100 visible" : "invisible"
         }`}
           title="Back to top"

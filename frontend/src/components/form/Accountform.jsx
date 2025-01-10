@@ -397,6 +397,22 @@ const AccountForm = () => {
                                             Forgot Password?
                                         </button>
                                     )}
+                                    <style>{`
+                                        .forgot_password_btn {
+                                            background: none;
+                                            border: none;
+                                            color: #fff;
+                                            cursor: pointer;
+                                            text-decoration: underline;
+                                            padding: 0;
+                                            font-size: 1rem;
+                                        }
+
+                                        .forgot_password_btn:hover {
+                                            color: #0056b3;
+                                            text-decoration: none;
+                                        }
+                                    `}</style>
                                 </div>
 
                                 {/*===== Form-Close-Btn =====*/}

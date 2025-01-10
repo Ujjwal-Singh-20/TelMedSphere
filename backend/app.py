@@ -221,7 +221,7 @@ def forgot_password():
     token = secrets.token_urlsafe(16)
 
     # Store the token in the user's document with an expiration time
-    expiration_time = datetime.datetime.utcnow() + datetime.timedelta(hours=1)
+    expiration_time = datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(hours=1)
     patients.update_one({'email': email}, {'$set': {'reset_token': token, 'reset_token_expiration': expiration_time}})
     doctor.update_one({'email': email}, {'$set': {'reset_token': token, 'reset_token_expiration': expiration_time}})
 
@@ -236,26 +236,31 @@ def forgot_password():
     return jsonify({'message': 'Password reset link sent'}), 200
 
 
-@app.route('/reset_password/<token>', methods=['POST'])
+@app.route('/reset_password/<token>', methods=['GET', 'POST'])
 def reset_password(token):
-    data = request.get_json()
-    new_password = data['password']
-    hashed_password = bcrypt.generate_password_hash(new_password).decode('utf-8')
+    if request.method == 'GET':
+        return jsonify({'message': 'Please provide a new password', 'token': token}), 200
+    elif request.method == 'POST':
+        data = request.get_json()
+        new_password = data['password']
+        hashed_password = bcrypt.generate_password_hash(new_password).decode('utf-8')
 
-    # Find the user with the token and check if it's still valid
-    user = patients.find_one({'reset_token': token, 'reset_token_expiration': {'$gt': datetime.datetime.utcnow()}}) or \
-           doctor.find_one({'reset_token': token, 'reset_token_expiration': {'$gt': datetime.datetime.utcnow()}})
-    
-    if not user:
-        return jsonify({'message': 'The reset link is invalid or has expired'}), 400
-
-    # Update the user's password and remove the reset token
-    patients.update_one({'reset_token': token}, {'$set': {'passwd': hashed_password}, '$unset': {'reset_token': "", 'reset_token_expiration': ""}})
-    doctor.update_one({'reset_token': token}, {'$set': {'passwd': hashed_password}, '$unset': {'reset_token': "", 'reset_token_expiration': ""}})
-
-    return jsonify({'message': 'Password has been reset'}), 200
-
+        # Find the user with the token and check if it's still valid
+        user = patients.find_one({'reset_token': token, 'reset_token_expiration': {'$gt': datetime.datetime.now(datetime.timezone.utc)}}) or \
+               doctor.find_one({'reset_token': token, 'reset_token_expiration': {'$gt': datetime.datetime.now(datetime.timezone.utc)}})
         
+        if not user:
+            return jsonify({'message': 'The reset link is invalid or has expired'}), 400
+
+        # Update the user's password and remove the reset token
+        patients.update_one({'reset_token': token}, {'$set': {'passwd': hashed_password}, '$unset': {'reset_token': "", 'reset_token_expiration': ""}})
+        doctor.update_one({'reset_token': token}, {'$set': {'passwd': hashed_password}, '$unset': {'reset_token': "", 'reset_token_expiration': ""}})
+
+        return jsonify({'message': 'Password has been reset'}), 200
+    else:
+        return jsonify({'message': 'Method not allowed'}), 405
+
+
 @app.route('/doc_status', methods=['PUT'])
 def doc_status():
     data = request.get_json()
